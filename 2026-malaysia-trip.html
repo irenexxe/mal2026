@@ -1,0 +1,912 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>马来西亚旅行｜青岛↔亚庇↔槟城 9.30-10.7</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+body{
+  font-family:system-ui,-apple-system,Segoe UI,Roboto,"PingFang SC","Microsoft YaHei",sans-serif;
+  background:#f7f9fc;color:#222;line-height:1.65;padding:16px;max-width:1300px;margin:0 auto;
+}
+header{
+  background:#1f4680;color:white;padding:24px;border-radius:12px;margin-bottom:20px;
+}
+.countdown-wrap{
+  background:#fff3cd;color:#856404;padding:16px 20px;border-radius:10px;margin:12px 0 24px;border:1px solid #ffeeba;
+}
+.countdown-item{
+  display:inline-block;background:#fff;padding:6px 12px;margin:4px;border-radius:6px;font-weight:bold;font-size:18px;
+}
+.tabs{display:flex;gap:8px;margin:16px 0;flex-wrap:wrap;}
+.tab-btn{padding:10px 18px;border:none;border-radius:8px;cursor:pointer;font-size:15px;background:#dde3ec;}
+.tab-btn.active{background:#1f4680;color:white;}
+.tab-panel{display:none;}
+.tab-panel.active{display:block;}
+
+h2{margin:28px 0 12px;color:#1f4680;border-left:4px solid #1f4680;padding-left:10px;}
+h3{margin:18px 0 8px;}
+h4{margin:12px 0 6px;}
+
+table{width:100%;border-collapse:collapse;margin:12px 0 24px;background:white;box-shadow:0 1px 3px #00000018;}
+th,td{border:1px solid #cbd5e0;padding:9px 11px;font-size:14px;vertical-align:top;}
+th{background:#e8edf4;}
+
+.timeline{border-left:2px solid #94a3b8;margin-left:10px;padding-left:22px;}
+.timeline-item{
+  position:relative;margin-bottom:22px;background:white;padding:14px 16px;border-radius:10px;box-shadow:0 1px 4px #00000014;
+}
+.timeline-item::before{
+  content:"";position:absolute;left:-28px;top:14px;width:12px;height:12px;background:#1f4680;border-radius:50%;
+}
+.map-link{
+  display:inline-block;background:#0d6efd;color:white !important;text-decoration:none;padding:4px 9px;border-radius:6px;font-size:13px;margin-top:6px;
+}
+.note-box{background:#eef2f9;padding:16px;border-radius:10px;margin:14px 0;}
+.warn-box{background:#ffe9e9;border:1px solid #ffc4c4;padding:14px;border-radius:8px;margin:12px 0;}
+.success-box{background:#e8f8f5;border:1px solid #b2e9dd;padding:14px;border-radius:8px;margin:12px 0;}
+ul,ol{padding-left:22px;margin:8px 0;}
+@media(max-width:720px){
+  th,td{padding:6px 4px;font-size:12px;}
+  .tabs{gap:4px}
+  .tab-btn{padding:8px 12px;font-size:14px;}
+}
+</style>
+</head>
+<body>
+<header>
+  <h1>马来西亚旅行｜青岛 ↔ 亚庇 ↔ 槟城</h1>
+  <p>出行日期：9.30 - 10.7｜6人(9.30-10.3) / 4人(10.4-10.7)｜主力交通：Grab网约车｜货币：马币MYR</p>
+</header>
+
+<div class="countdown-wrap">
+  <h3>⏱ 距离下一项活动</h3>
+  <div id="next-event-name">--</div>
+  <div id="countdown-box"></div>
+</div>
+
+<div class="tabs">
+  <button class="tab-btn active" data-tab="overview">📋总览&航班</button>
+  <button class="tab-btn" data-tab="daily">🗓当日详细行程</button>
+  <button class="tab-btn" data-tab="timeline-view">⏳时间轴</button>
+  <button class="tab-btn" data-tab="money-check">💰花费&出行清单</button>
+</div>
+
+<!-- ========== 【标签1：总览 & 航班信息】 ========== -->
+<div class="tab-panel active" id="overview">
+  <div class="warn-box">
+    <h4>🚨重点硬性提醒</h4>
+    <ul>
+      <li>亚航/酷航廉价航空，<strong>无免费托运行李，必须提前官网购买行李额度</strong>，机场现场购买溢价极高</li>
+      <li>沙巴入境必须提前填写MDAC入境申报，保留回执，入境大概率查验返程机票</li>
+      <li>护照换发会<strong>变更护照号码</strong>，拿到新护照务必同步更新航司预订信息；新旧护照一起携带出行</li>
+      <li>10.7槟城返程航班：<strong>19:00必须准时出发前往槟城机场，不可拖延，预留国际航班充足值机时间</strong></li>
+    </ul>
+  </div>
+  <h2>全程航班信息</h2>
+  <table>
+    <thead>
+      <tr><th>航段</th><th>日期</th><th>航班号</th><th>起降时间</th><th>中转说明</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>青岛 → 亚庇</td>
+        <td>9.30</td>
+        <td>TR187 / TR416</td>
+        <td>08:50-15:00 青岛-新加坡；17:00-19:30 新加坡-亚庇</td>
+        <td>新加坡转机</td>
+      </tr>
+      <tr>
+        <td>亚庇 → 槟城</td>
+        <td>10.4</td>
+        <td>AK5323</td>
+        <td>12:25-15:05</td>
+        <td>亚庇直飞槟城，转场航班</td>
+      </tr>
+      <tr>
+        <td>槟城 → 青岛</td>
+        <td>10.6/10.7</td>
+        <td>TR499 / TR186</td>
+        <td>22:20-23:55槟城-新加坡；01:30-07:35新加坡-青岛</td>
+        <td>新加坡转机返程</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>7天行程总览表</h2>
+  <table>
+    <thead>
+      <tr><th>日期+第几天</th><th>城市</th><th>核心区域</th><th>核心安排</th><th>住宿</th><th>重要提示</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>9.30 Day1</td>
+        <td>亚庇</td>
+        <td>亚庇市区（Imago商圈）</td>
+        <td>青岛飞亚庇落地入境、机场接驳、市区休整、Imago商场简餐</td>
+        <td>Mari2 Homestay M7 (3BR) @ Imago The loft B</td>
+        <td>提前填写沙巴MDAC入境申报</td>
+      </tr>
+      <tr>
+        <td>10.1 Day2</td>
+        <td>亚庇</td>
+        <td>哲斯顿码头、双岛、丹绒亚路</td>
+        <td>马奴干岛+沙比岛双岛跳岛浮潜、沙滩拍照、丹绒亚路日落</td>
+        <td>Mari2 Homestay M7 (3BR) @ Imago The loft B</td>
+        <td>跳岛预定免费取消套餐；自备浮潜装备；风浪大启用市内预案</td>
+      </tr>
+      <tr>
+        <td>10.2 Day3</td>
+        <td>亚庇</td>
+        <td>Kawa红树林、市区</td>
+        <td>自然醒休整、采购伴手礼、Kawa红树林半日游（长鼻猴、日落、萤火虫）</td>
+        <td>Mari2 Homestay M7 (3BR) @ Imago The loft B</td>
+        <td>红树林提前预约接送；全程强效驱蚊</td>
+      </tr>
+      <tr>
+        <td>10.3 Day4</td>
+        <td>亚庇</td>
+        <td>加雅街老城、丹绒亚路、市区免税</td>
+        <td>加雅街Citywalk、老街美食、Jesselton Mall免税购物、二刷日落、周六夜市</td>
+        <td>Mari2 Homestay M7 (3BR) @ Imago The loft B</td>
+        <td>免税购物带护照原件；免税商品离境前禁止拆封；夜市备小额现金</td>
+      </tr>
+      <tr>
+        <td>10.4 Day5</td>
+        <td>亚庇→槟城</td>
+        <td>亚庇机场、槟城乔治市</td>
+        <td>亚庇飞槟城转场、乔治市世界遗产打卡、滨海草坪、汕头街夜市</td>
+        <td>180° Penthouse Sunrise Seaview Duplex（Karpal Singh Drive）</td>
+        <td>亚航提前值机，切勿迟到；槟城打车点对点出行</td>
+      </tr>
+      <tr>
+        <td>10.5 Day6</td>
+        <td>槟城</td>
+        <td>升旗山、极乐寺、乔治市老城、Gurney湾</td>
+        <td>升旗山观景、极乐寺游览、蓝屋、老城漫游、Gurney Bay滨海公园日落、新关仔角夜市</td>
+        <td>180° Penthouse Sunrise Seaview Duplex（Karpal Singh Drive）</td>
+        <td>升旗山大雾切换备用行程；寺庙着装必须遮肩遮膝</td>
+      </tr>
+      <tr>
+        <td>10.6 Day7</td>
+        <td>槟城→返程</td>
+        <td>乔治市老城、槟城机场</td>
+        <td>老城美食扫街、机动休闲、整理行李、晚间机场返程</td>
+        <td>无（当日返程）</td>
+        <td>19:00出发机场；退税商品保留小票，保持未拆封</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- ========== 【标签2：每日详细行程】 ========== -->
+<div class="tab-panel" id="daily">
+  <h2>Day1｜9.30 落地亚庇｜入境休整 + Imago商圈就餐</h2>
+  <table>
+    <thead>
+      <tr><th>时间</th><th>安排</th><th>交通方式</th><th>6人合计费用(MYR)</th><th>路程耗时&注意事项</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>全天</td>
+        <td>国内飞亚庇，抵达亚庇机场</td>
+        <td>飞机</td>
+        <td>机票自理</td>
+        <td>入境预留40‑60min排队<br>📍亚庇国际机场 <a class="map-link" target="_blank" href="https://www.google.com/maps/place/Kota+Kinabalu+International+Airport">打开谷歌地图</a></td>
+      </tr>
+      <tr>
+        <td>落地后</td>
+        <td>机场取行李，Grab7座MPV前往民宿办理入住</td>
+        <td>Grab7座MPV</td>
+        <td>35‑45</td>
+        <td>路程约25‑30min</td>
+      </tr>
+      <tr>
+        <td>15:00‑17:30</td>
+        <td>Imago商场闲逛、超市采购零食水</td>
+        <td>步行</td>
+        <td>餐饮购物自费</td>
+        <td>民宿步行可达10‑15min<br>📍Imago Shopping Mall <a class="map-link" target="_blank" href="https://www.google.com/maps/place/Imago+Shopping+Mall">打开谷歌地图</a></td>
+      </tr>
+      <tr>
+        <td>18:00</td>
+        <td>亚庇市区吃晚饭，海鲜/肉骨茶</td>
+        <td>Grab7座MPV /步行</td>
+        <td>自费</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>21:00</td>
+        <td>回民宿休息</td>
+        <td>步行</td>
+        <td>0</td>
+        <td>早点休息，为第二天跳岛蓄力；备选宵夜Grab12分钟加雅街，深夜不去偏僻小巷</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>Day2｜10.1 马奴干岛+沙比岛跳岛｜丹绒亚路日落</h2>
+  <div class="note-box"><strong>预案：雨天出海取消 → 替换 Imago商场+沙巴博物馆+水上清真寺外围+丹绒亚路日落</strong></div>
+  <table>
+    <thead>
+      <tr><th>时间</th><th>安排</th><th>交通方式</th><th>6人合计费用(MYR)</th><th>路程耗时&注意事项</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>07:45</td>
+        <td>民宿集合，Grab7座MPV前往哲斯顿码头</td>
+        <td>Grab7座MPV</td>
+        <td>18‑26</td>
+        <td>路程约10‑12min；贵重物品留在民宿保险箱<br>📍Jesselton Point <a class="map-link" target="_blank" href="https://www.google.com/maps/place/Jesselton+Point">打开谷歌地图</a></td>
+      </tr>
+      <tr>
+        <td>08:15</td>
+        <td>私人包快艇出发，马奴干岛→沙比岛</td>
+        <td>私人包快艇</td>
+        <td>550‑680（含上岛费）</td>
+        <td>海上航行：码头👉马奴干约20min；马奴干👉沙比约10min；务必书面确认15:00返航，免费取消套餐；自带零食饮用水</td>
+      </tr>
+      <tr>
+        <td>08:40‑12:00</td>
+        <td>马奴干岛沙滩玩水、拍照、岛上午餐简餐</td>
+        <td>快艇两岛转运</td>
+        <td>包费已包含</td>
+        <td>凉亭多适合休整；岛上餐饮贵建议自带食物<br>📍Manukan Island</td>
+      </tr>
+      <tr>
+        <td>12:10‑14:20</td>
+        <td>转场沙比岛浮潜玩水；鱼群丰富</td>
+        <td>快艇两岛转运</td>
+        <td>包费已包含</td>
+        <td>禁止触碰珊瑚海胆；持续补涂防晒；可自费水上项目<br>📍Sapi Island</td>
+      </tr>
+      <tr>
+        <td>14:40</td>
+        <td>全员登船返航哲斯顿码头</td>
+        <td>快艇</td>
+        <td>包费已包含</td>
+        <td>沙比岛👉哲斯顿码头航行约20min；避开午后大风浪，不建议拖过16点</td>
+      </tr>
+      <tr>
+        <td>15:10</td>
+        <td>码头Grab7座MPV返回民宿冲澡休整</td>
+        <td>Grab7座MPV</td>
+        <td>18‑26</td>
+        <td>路程约10‑12min</td>
+      </tr>
+      <tr>
+        <td>17:10</td>
+        <td>Grab7座MPV前往丹绒亚路海滩看日落</td>
+        <td>Grab7座MPV</td>
+        <td>22‑30</td>
+        <td>路程约20min；提前占位；海边蚊虫多备好驱蚊液<br>📍Tanjung Aru Beach <a class="map-link" target="_blank" href="https://www.google.com/maps/place/Tanjung+Aru+Beach">打开谷歌地图</a></td>
+      </tr>
+      <tr>
+        <td>19:00</td>
+        <td>Grab7座MPV返回KK Times Square，Imago周边吃海鲜晚餐</td>
+        <td>Grab7座MPV</td>
+        <td>22‑30</td>
+        <td>路程约20min</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>Day3｜10.2 Kawa红树林半日游｜出海休整日</h2>
+  <div class="note-box"><strong>预案：小雨正常出行，大雨取消可退改；预订：6人独立小包团，真Kawa黄墙基地，不拼客，中文向导优先，72h免费取消</strong></div>
+  <table>
+    <thead>
+      <tr><th>时间</th><th>安排</th><th>交通方式</th><th>6人合计费用(MYR)</th><th>路程耗时&注意事项</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>上午</td>
+        <td>自然醒，民宿休整；Imago采购手信零食</td>
+        <td>步行</td>
+        <td>自费餐饮购物</td>
+        <td>休整恢复跳岛体力，不要早起</td>
+      </tr>
+      <tr>
+        <td>13:15‑13:30</td>
+        <td>民宿大堂等候，Kawa红树林小包团专车上门接人</td>
+        <td>独立小包团专车</td>
+        <td>500‑580（含接送、船票、下午茶、晚餐）</td>
+        <td>市区民宿👉Kawa码头车程约1h15min；长裤长袖+强效驱蚊液，带薄外套<br>📍Kawa Wetland</td>
+      </tr>
+      <tr>
+        <td>15:00‑21:00</td>
+        <td>Kawa码头下午茶；游船寻长鼻猴；黑沙滩日落；自助晚餐；夜间萤火虫游船</td>
+        <td>团车+两次内河游船</td>
+        <td>团费已包含</td>
+        <td>河道游船单程约25‑35min；萤火虫严禁闪光灯；禁止投喂猴子</td>
+      </tr>
+      <tr>
+        <td>21:00之后</td>
+        <td>专车送返回市区民宿休息</td>
+        <td>独立小包团专车</td>
+        <td>团费已包含</td>
+        <td>Kawa码头👉亚庇市区车程约1h15min；夜间车程长路上注意休息</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>Day4｜10.3【方案A】马里‑马里文化村上午场｜周六夜市</h2>
+  <table>
+    <thead>
+      <tr><th>时间</th><th>安排</th><th>交通方式</th><th>6人合计费用(MYR)</th><th>路程耗时&注意事项</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>08:45</td>
+        <td>民宿大堂集合等候接送车</td>
+        <td>文化村私人小包团专车</td>
+        <td>720‑840</td>
+        <td>市区民宿👉马里马里文化村车程约30min；6人小包不拼外人，含接送门票中文向导自助午餐，24h免费取消；雨林驱蚊，防滑鞋<br>📍Mari-Mari Cultural Village <a class="map-link" target="_blank" href="https://www.google.com/maps/place/Mari-Mari+Cultural+Village">打开谷歌地图</a></td>
+      </tr>
+      <tr>
+        <td>09:00‑13:30</td>
+        <td>马里‑马里文化村五大部落参观、民俗演示、吹箭体验、歌舞表演、自助午餐，13:30专车送回民宿</td>
+        <td>团车</td>
+        <td>费用已包含在内</td>
+        <td>文化村内导览步行；固定导览团，不可自由闲逛；雨天照常营业，暴雨可退改</td>
+      </tr>
+      <tr>
+        <td>13:30‑16:30</td>
+        <td>民宿休整；Grab7座MPV前往Jesselton Mall免税商场购物</td>
+        <td>Grab7座MPV</td>
+        <td>40‑50</td>
+        <td>民宿👉Jesselton Mall车程约15‑20min；免税购物务必携带护照原件；免税商品离境前禁止拆封；商场空调足带薄外套<br>📍Jesselton Mall <a class="map-link" target="_blank" href="https://www.google.com/maps/place/Jesselton+Mall">打开谷歌地图</a></td>
+      </tr>
+      <tr>
+        <td>17:20</td>
+        <td>Grab7座MPV前往丹绒亚路海滩二刷日落；天气差直接回民宿休息</td>
+        <td>Grab7座MPV</td>
+        <td>40‑55</td>
+        <td>路程约20min；提前占位；海边驱蚊</td>
+      </tr>
+      <tr>
+        <td>19:00</td>
+        <td>Grab7座MPV前往加雅街周六夜市逛吃</td>
+        <td>Grab7座MPV</td>
+        <td>12‑20</td>
+        <td>路程约10‑12min；小摊备小额现金；人多保管随身财物<br>📍Gaya Street <a class="map-link" target="_blank" href="https://www.google.com/maps/place/Gaya+Street">打开谷歌地图</a></td>
+      </tr>
+      <tr>
+        <td>21:30</td>
+        <td>Grab7座MPV返回民宿休息</td>
+        <td>Grab7座MPV</td>
+        <td>12‑20</td>
+        <td>路程约10‑12min；不去偏僻小巷</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>Day4｜10.3【方案B】不参加马里‑马里文化村｜市区自由慢逛｜周六夜市</h2>
+  <div class="note-box"><strong>下午三选一：B1 JesseltonMall+Imago；B2 沙巴州博物馆+滨海栈道；B3 沙巴大学+水上清真寺</strong></div>
+  <table>
+    <thead>
+      <tr><th>时间</th><th>安排</th><th>交通方式</th><th>6人合计费用(MYR)</th><th>路程耗时&注意事项</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>09:00‑12:30</td>
+        <td>Grab7座MPV到加雅街老城Citywalk：艾京生钟楼、骑楼巷弄、壁画打卡；本地茶室吃午餐</td>
+        <td>Grab7座MPV</td>
+        <td>24‑30</td>
+        <td>民宿👉加雅街车程约10‑12min；免费街区；周六白天游客较多；顺路逛中央市场</td>
+      </tr>
+      <tr>
+        <td>12:30‑13:30</td>
+        <td>Grab7座MPV回民宿午休避开正午暴晒</td>
+        <td>Grab7座MPV</td>
+        <td>包含在上行打车费</td>
+        <td>加雅街👉民宿车程约10‑12min</td>
+      </tr>
+      <tr>
+        <td>13:30‑16:30</td>
+        <td>【下午三选一】 B1👉Jesselton Mall+Imago商场购物吃饭<br>B2👉沙巴州博物馆+哲斯顿滨海栈道<br>B3👉沙巴大学粉红清真寺+水上清真寺外围打卡</td>
+        <td>Grab7座MPV</td>
+        <td>40‑60（打车，门票另付）</td>
+        <td>B1：民宿👉Jesselton Mall车程约15‑20min，带护照原件；<br>B2：民宿👉沙巴州博物馆车程约15min，9‑17点，周五15:30闭馆，只收现金<br>📍Sabah State Museum <a class="map-link" target="_blank" href="https://www.google.com/maps/place/Sabah+State+Museum">打开谷歌地图</a><br>B3：民宿👉沙巴大学车程约25‑30min，清真寺参观着装必须遮肩遮膝<br>📍Universiti Malaysia Sabah <a class="map-link" target="_blank" href="https://www.google.com/maps/place/Universiti+Malaysia+Sabah">打开谷歌地图</a></td>
+      </tr>
+      <tr>
+        <td>17:20</td>
+        <td>Grab7座MPV前往丹绒亚路海滩二刷日落，阴天直接跳过回民宿休息</td>
+        <td>Grab7座MPV</td>
+        <td>40‑55</td>
+        <td>路程约20min；提前占位，海边驱蚊保管随身物品</td>
+      </tr>
+      <tr>
+        <td>19:00</td>
+        <td>Grab7座MPV前往加雅街周六夜市逛吃</td>
+        <td>Grab7座MPV</td>
+        <td>12‑20</td>
+        <td>路程约10‑12min；小摊备小额现金；人多防盗</td>
+      </tr>
+      <tr>
+        <td>21:30</td>
+        <td>Grab7座MPV返回民宿休息</td>
+        <td>Grab7座MPV</td>
+        <td>12‑20</td>
+        <td>路程约10‑12min；不去偏僻小巷</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>Day5｜10.4 亚庇飞槟城｜乔治市世界遗产｜侨生博物馆｜4人</h2>
+  <div class="warn-box">侨生博物馆17:00停止入场，务必16:30前抵达</div>
+  <table>
+    <thead>
+      <tr><th>时间</th><th>安排</th><th>交通方式</th><th>4人合计费用(MYR)</th><th>路程耗时&注意事项</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>08:00</td>
+        <td>民宿早餐，全员退房，全部行李带走</td>
+        <td>步行</td>
+        <td>自费</td>
+        <td>确认亚航行李额度，无免费托运</td>
+      </tr>
+      <tr>
+        <td>09:00</td>
+        <td>Grab轿车前往亚庇机场值机</td>
+        <td>Grab轿车</td>
+        <td>18‑24</td>
+        <td>民宿👉亚庇机场车程约15‑20min；务必9:30前抵达机场，亚航柜台提前关闭</td>
+      </tr>
+      <tr>
+        <td>12:25</td>
+        <td>抵达槟城机场；Grab轿车前往槟城民宿办理入住</td>
+        <td>Grab轿车</td>
+        <td>50‑62</td>
+        <td>槟城机场👉乔治市民宿车程约40min；房间未打扫可寄存行李<br>📍Penang International Airport <a class="map-link" target="_blank" href="https://www.google.com/maps/place/Penang+International+Airport">打开谷歌地图</a></td>
+      </tr>
+      <tr>
+        <td>16:10</td>
+        <td>Grab轿车前往乔治市老城侨生博物馆</td>
+        <td>Grab轿车</td>
+        <td>18‑24</td>
+        <td>民宿👉侨生博物馆车程约15‑20min；老城多单行道，下车后步行几十米到馆门口<br>📍Pinang Peranakan Mansion <a class="map-link" target="_blank" href="https://www.google.com/maps/place/Pinang+Peranakan+Mansion">打开谷歌地图</a></td>
+      </tr>
+      <tr>
+        <td>16:30‑17:40</td>
+        <td>参观侨生博物馆</td>
+        <td>步行</td>
+        <td>120（4人，30MYR/人）</td>
+        <td>⚠️17:00停止入场，务必16:30前到；免费中文讲解，游览1‑1.5h</td>
+      </tr>
+      <tr>
+        <td>17:40‑18:40</td>
+        <td>步行逛乔治市：姐弟共骑壁画、爱情巷、姓周桥</td>
+        <td>步行</td>
+        <td>餐饮自费</td>
+        <td>街区内步行游览；世界遗产街区保管随身财物<br>📍George Town UNESCO</td>
+      </tr>
+      <tr>
+        <td>18:40‑19:20</td>
+        <td>滨海殖民大草坪休闲看海</td>
+        <td>步行</td>
+        <td>0</td>
+        <td>老城步行可达</td>
+      </tr>
+      <tr>
+        <td>19:20</td>
+        <td>Grab轿车到汕头街夜市吃槟城小吃</td>
+        <td>Grab轿车</td>
+        <td>12‑16</td>
+        <td>老城👉汕头街车程约8‑10min；四大天王小吃备小额现金，多人分食<br>📍Lebuh Chulia（汕头街）<a class="map-link" target="_blank" href="https://www.google.com/maps/place/Lebuh+Chulia">打开谷歌地图</a></td>
+      </tr>
+      <tr>
+        <td>21:00</td>
+        <td>Grab轿车返回民宿休息</td>
+        <td>Grab轿车</td>
+        <td>16‑20</td>
+        <td>汕头街👉民宿车程约12‑15min</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>Day6｜10.5 升旗山+极乐寺｜Gurney Bay日落+新关仔角夜市｜4人</h2>
+  <div class="note-box">今日周一，张弼士蓝屋闭馆，不安排老宅博物馆；升旗山大雾则改为老城漫游</div>
+  <table>
+    <thead>
+      <tr><th>时间</th><th>安排</th><th>交通方式</th><th>4人合计费用(MYR)</th><th>路程耗时&注意事项</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>08:00‑08:40</td>
+        <td>民宿早餐</td>
+        <td>步行</td>
+        <td>自费</td>
+        <td>早起避开升旗山旅行团高峰</td>
+      </tr>
+      <tr>
+        <td>08:50</td>
+        <td>Grab轿车前往升旗山缆车站</td>
+        <td>Grab轿车</td>
+        <td>22‑28</td>
+        <td>民宿👉升旗山缆车站车程约25‑30min；缆车优先选车尾视野最佳<br>📍Penang Hill Funicular Station <a class="map-link" target="_blank" href="https://www.google.com/maps/place/Penang+Hill+Funicular+Station">打开谷歌地图</a></td>
+      </tr>
+      <tr>
+        <td>09:20‑11:00</td>
+        <td>升旗山山顶观景，喝咖啡休息</td>
+        <td>缆车门票</td>
+        <td>约160（4人往返）</td>
+        <td>山顶温度略低备薄外套；如果大雾直接下山改老城</td>
+      </tr>
+      <tr>
+        <td>11:10</td>
+        <td>Grab轿车前往极乐寺</td>
+        <td>Grab轿车</td>
+        <td>8‑12</td>
+        <td>升旗山缆车站👉极乐寺车程约8‑10min；两景点距离很近不走回头路<br>📍Kek Lok Si Temple <a class="map-link" target="_blank" href="https://www.google.com/maps/place/Kek+Lok+Si+Temple">打开谷歌地图</a></td>
+      </tr>
+      <tr>
+        <td>11:20‑13:00</td>
+        <td>游览极乐寺，寺门口吃亚参叻沙午餐</td>
+        <td>步行</td>
+        <td>门票自费</td>
+        <td>寺庙参观着装要求遮肩遮膝；万佛宝塔拍照出片</td>
+      </tr>
+      <tr>
+        <td>13:15</td>
+        <td>Grab轿车直达乔治市老城（不返回民宿）</td>
+        <td>Grab轿车</td>
+        <td>24‑30</td>
+        <td>极乐寺👉乔治市老城车程约25‑30min；午后阵雨概率高，可躲进咖啡馆避雨</td>
+      </tr>
+      <tr>
+        <td>13:30‑16:40</td>
+        <td>乔治市深度漫游：Hin Bus Depot文创园、街头壁画、咖啡馆下午茶</td>
+        <td>步行</td>
+        <td>餐饮购物自费</td>
+        <td>老城街区步行；松弛节奏，可逛龙山堂邱公司</td>
+      </tr>
+      <tr>
+        <td>16:50</td>
+        <td>Grab轿车前往Gurney Bay滨海公园</td>
+        <td>Grab轿车</td>
+        <td>18‑22</td>
+        <td>乔治市老城👉Gurney Bay车程约15‑20min；看跨海大桥日落本地人休闲草坪<br>📍Gurney Bay <a class="map-link" target="_blank" href="https://www.google.com/maps/place/Gurney+Bay">打开谷歌地图</a></td>
+      </tr>
+      <tr>
+        <td>17:40‑18:20</td>
+        <td>Gurney Bay看日落散步</td>
+        <td>步行</td>
+        <td>0</td>
+        <td>日落前提前到达占位</td>
+      </tr>
+      <tr>
+        <td>18:30</td>
+        <td>步行到新关仔角海边夜市晚餐</td>
+        <td>步行</td>
+        <td>自费</td>
+        <td>Gurney Bay步行可达；吃沙爹、煎蕊、烤魔鬼鱼小吃</td>
+      </tr>
+      <tr>
+        <td>21:00</td>
+        <td>Grab轿车返回民宿休息</td>
+        <td>Grab轿车</td>
+        <td>18‑22</td>
+        <td>Gurney Bay👉民宿车程约15‑20min；海边夜晚风偏凉</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>Day7｜10.6 槟城美食扫街｜机动休闲｜返程青岛｜4人</h2>
+  <div class="warn-box">硬性规则：19:00必须出发前往槟城机场，绝不拖延</div>
+  <table>
+    <thead>
+      <tr><th>时间</th><th>安排</th><th>交通方式</th><th>4人合计费用(MYR)</th><th>路程耗时&注意事项</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>08:30</td>
+        <td>Grab轿车前往乔治市老字号吃早餐</td>
+        <td>Grab轿车</td>
+        <td>16‑20</td>
+        <td>民宿👉乔治市老城车程约12‑15min；打卡海南鸡饭、咖椰吐司、白咖啡</td>
+      </tr>
+      <tr>
+        <td>09:30‑12:30</td>
+        <td>老城美食扫街，街巷闲逛，采购手信伴手礼</td>
+        <td>步行</td>
+        <td>自费</td>
+        <td>老城步行逛；尝小吃，采购香料、娘惹伴手礼</td>
+      </tr>
+      <tr>
+        <td>12:40</td>
+        <td>老城解决午餐</td>
+        <td>步行</td>
+        <td>自费</td>
+        <td>吃饱休整，预留收拾行李时间</td>
+      </tr>
+      <tr>
+        <td>14:00‑17:30</td>
+        <td>机动三选一：①Gurney Plaza商场闲逛；②康华利斯古堡打卡；③回民宿躺平休息</td>
+        <td>Grab轿车</td>
+        <td>18‑24</td>
+        <td>老城👉Gurney Plaza车程约15min；不要大规模购物；17:30务必回到民宿收拾全部行李<br>📍Fort Cornwallis <a class="map-link" target="_blank" href="https://www.google.com/maps/place/Fort+Cornwallis">打开谷歌地图</a></td>
+      </tr>
+      <tr>
+        <td>18:40</td>
+        <td>民宿集合，检查证件、退税单据、免税商品</td>
+        <td>步行</td>
+        <td>0</td>
+        <td>确认护照、未拆封免税商品、小票齐全</td>
+      </tr>
+      <tr>
+        <td>19:00</td>
+        <td>准时Grab轿车出发去槟城机场</td>
+        <td>Grab轿车</td>
+        <td>50‑62</td>
+        <td>民宿👉槟城机场车程约40min；国际航班预留充足值机时间</td>
+      </tr>
+      <tr>
+        <td>22:20</td>
+        <td>航班起飞，经新加坡转机返回青岛</td>
+        <td>飞机</td>
+        <td>机票自理</td>
+        <td>提前确认新加坡转机政策，保存全部行程单</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- ========== 【标签3：时间轴视图】 ========== -->
+<div class="tab-panel" id="timeline-view">
+  <h2>⏳全程旅行时间轴</h2>
+  <div class="timeline">
+    <div class="timeline-item">
+      <h4>9.30 Day1｜青岛飞亚庇，落地入境入住民宿</h4>
+      <p>青岛出发→新加坡转机→亚庇机场落地；Grab7座MPV前往Imago商圈民宿；Imago采购+晚餐休整</p>
+      <p>📍亚庇国际机场 / Imago商圈
+        <br><a class="map-link" target="_blank" href="https://www.google.com/maps/place/Kota+Kinabalu+International+Airport">谷歌地图-亚庇机场</a>
+      </p>
+    </div>
+    <div class="timeline-item">
+      <h4>10.1 Day2｜双岛跳岛浮潜｜丹绒亚路日落</h4>
+      <p>哲斯顿码头集合，私人快艇马奴干岛+沙比岛浮潜玩水；傍晚前往丹绒亚路海滩看日落</p>
+      <p>📍Jesselton Point码头
+        <br><a class="map-link" target="_blank" href="https://www.google.com/maps/place/Jesselton+Point">谷歌地图-哲斯顿码头</a>
+      </p>
+    </div>
+    <div class="timeline-item">
+      <h4>10.2 Day3｜Kawa红树林半日游</h4>
+      <p>上午民宿休整；下午小团接送前往Kawa湿地，游船寻找长鼻猴、黑沙滩日落、夜间萤火虫游船</p>
+      <p>📍Kawa Wetland 红树林</p>
+    </div>
+    <div class="timeline-item">
+      <h4>10.3 Day4｜马里马里文化村（可选）+加雅街周六夜市</h4>
+      <p>方案A：马里马里文化村；方案B：市区自由漫游；下午Jesselton Mall免税购物，丹绒亚路二刷日落，晚上周六夜市</p>
+      <p>📍Mari-Mari文化村 / Gaya Street夜市</p>
+    </div>
+    <div class="timeline-item">
+      <h4>10.4 Day5｜亚庇飞槟城｜乔治市世界遗产、侨生博物馆、汕头街夜市</h4>
+      <p>退房，亚庇机场飞槟城；入住槟城民宿；侨生博物馆参观，乔治市老城壁画打卡，汕头街夜市晚餐</p>
+      <p>📍Pinang Peranakan Mansion 侨生博物馆</p>
+    </div>
+    <div class="timeline-item">
+      <h4>10.5 Day6｜升旗山+极乐寺，Gurney Bay日落+新关仔角夜市</h4>
+      <p>升旗山缆车登顶观景；极乐寺参观；乔治市老城漫游；Gurney湾看跨海大桥日落，海边夜市</p>
+      <p>📍Penang Hill / Kek Lok Si Temple</p>
+    </div>
+    <div class="timeline-item">
+      <h4>10.6 Day7｜槟城老城美食扫街，晚间前往机场返程</h4>
+      <p>老城早餐+美食闲逛、采购伴手礼；19:00准时出发槟城机场，航班经新加坡转机返回青岛</p>
+      <p>📍槟城国际机场</p>
+    </div>
+  </div>
+</div>
+
+<!-- ========== 【标签4：花费&行李&检查清单】 ========== -->
+<div class="tab-panel" id="money-check">
+  <h2>💰7天｜不含机票、住宿，每日花费明细表(MYR)</h2>
+  <table>
+    <thead>
+      <tr><th>天数</th><th>行程简介</th><th>人数</th><th>团费/门票/打车合计(MYR)</th><th>餐饮合计(MYR)</th><th>当日总合计(MYR)</th><th>备注</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Day1</td>
+        <td>抵达亚庇，市区逛Imago、晚餐</td>
+        <td>6人</td>
+        <td>35‑45（机场打车）</td>
+        <td>210‑270</td>
+        <td>245‑315</td>
+        <td>市内短途多步行；仅机场进市区一笔打车；餐饮6人，人均35‑45</td>
+      </tr>
+      <tr>
+        <td>Day2</td>
+        <td>跳岛一日（马奴干+沙比）+丹绒亚路日落</td>
+        <td>6人</td>
+        <td>586‑732（包快艇550‑680+全部打车36‑52）</td>
+        <td>210‑270</td>
+        <td>796‑1002</td>
+        <td>包快艇含上岛费；岛上简餐/自带食物；多次Grab7座MPV</td>
+      </tr>
+      <tr>
+        <td>Day3</td>
+        <td>Kawa红树林独立小包团</td>
+        <td>6人</td>
+        <td>500‑580（团费全包接送游船下午茶晚餐）</td>
+        <td>0‑60</td>
+        <td>500‑640</td>
+        <td>团费已含下午茶、自助晚餐；仅额外零食饮料0‑60</td>
+      </tr>
+      <tr>
+        <td>Day4‑A</td>
+        <td>马里‑马里文化村小包团+丹绒亚路+周六夜市</td>
+        <td>6人</td>
+        <td>772‑890（文化村720‑840+打车52‑50）</td>
+        <td>210‑270</td>
+        <td>982‑1160</td>
+        <td>文化村团费含自助午餐；晚餐夜市另算</td>
+      </tr>
+      <tr>
+        <td>Day4‑B</td>
+        <td>不参加文化村，市区自由逛+周六夜市</td>
+        <td>6人</td>
+        <td>76‑110（全部Grab7座MPV打车；门票按需另加）</td>
+        <td>210‑270</td>
+        <td>286‑380</td>
+        <td>B2沙巴博物馆6人门票90MYR；B3无门票；上表不含博物馆门票，如需+90MYR</td>
+      </tr>
+      <tr>
+        <td>Day5</td>
+        <td>亚庇飞槟城；乔治市，侨生博物馆【方案A】</td>
+        <td>4人</td>
+        <td>206‑252（亚庇打车42‑66+槟城机场打车50‑62+侨生博物馆120+槟城市内打车14‑24）</td>
+        <td>140‑180</td>
+        <td>346‑432</td>
+        <td>不含飞机行李托运；侨生博物馆门票4人120MYR；多段Grab轿车</td>
+      </tr>
+      <tr>
+        <td>Day6</td>
+        <td>升旗山+极乐寺+Gurney Bay、新关仔角夜市【方案A】</td>
+        <td>4人</td>
+        <td>220‑270（升旗山缆车160+各段打车60‑110；极乐寺门票自费约20‑40）</td>
+        <td>140‑180</td>
+        <td>360‑450</td>
+        <td>极乐寺门票4人合计20‑40已计入；全天多次Grab轿车</td>
+      </tr>
+      <tr>
+        <td>Day7</td>
+        <td>槟城美食扫街，机动，晚上去机场返程【方案A】</td>
+        <td>4人</td>
+        <td>104‑148（市内打车+去机场50‑62）</td>
+        <td>140‑180</td>
+        <td>244‑328</td>
+        <td>19:00出发去机场；机动项目大多免费；康华利斯古堡门票4人约60MYR未计入，如需+60</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="note-box">
+    <h3>费用汇总（不含机票住宿）</h3>
+    <p>整套方案A(Day1‑Day3 + Day4‑A + Day5‑7A)：6人部分：2523‑3192 MYR｜4人部分：950‑1210 MYR</p>
+    <p>整套方案B(Day1‑Day3 + Day4‑B + Day5‑7A)：6人部分：1827‑2337 MYR｜4人部分：950‑1210 MYR</p>
+    <p>1MYR ≈1.53人民币（实时波动）</p>
+    <p>未计入开销：海上自费项目、纪念品手信、行李托运费用</p>
+  </div>
+
+  <h2>🎒行李清单</h2>
+  <div class="success-box">
+    <h4>证件类（全部拍照云端备份）</h4>
+    <ul>
+      <li>护照原件、全程航班行程单、MDAC入境回执、信用卡</li>
+      <li>人均200-300马币现金、境外eSIM/国际漫游</li>
+    </ul>
+  </div>
+  <div class="success-box">
+    <h4>衣物类</h4>
+    <ul>
+      <li>夏装、薄长袖（寺庙/山顶）、泳衣、速干换洗衣物</li>
+      <li>拖鞋、运动鞋、防晒帽、墨镜</li>
+    </ul>
+  </div>
+  <div class="success-box">
+    <h4>防护药品类</h4>
+    <ul>
+      <li>SPF50+防晒霜、强效驱蚊液、肠胃药、感冒药、创可贴、个人常备药</li>
+      <li>浮潜咬嘴、手机防水袋</li>
+    </ul>
+  </div>
+  <div class="success-box">
+    <h4>其他杂物</h4>
+    <ul>
+      <li>英标转换插头、充电宝、便携雨伞、购物便携袋</li>
+    </ul>
+  </div>
+
+  <h2>✅出发前检查清单</h2>
+  <ul>
+    <li>护照有效期＞6 个月</li>
+    <li>MDAC 入境卡出行前 3 天填写，保存回执；沙巴入境记得柜台盖章</li>
+    <li>三段机票确认，尤其槟城返程 22 点航班，确认行李直挂、中转时间</li>
+    <li>确认酒店：亚庇 KK Times Square Boulevard 4 晚；槟城 29,Karpal Singh Drive 2 晚，优先可取消房型</li>
+    <li>购买含浮潜水上项目旅行保险</li>
+    <li>eSIM / 电话卡；Grab 注册，4 人出行可以一台手机叫车</li>
+    <li>英标三脚转换插头，防晒，防水袋，折叠雨伞</li>
+    <li>现金：4 人建议 800‑1200 马币，小摊夜市用；商场大部分可支付宝刷卡</li>
+    <li>跳岛（马奴干 + 沙比）、Kawa 红树林确认预订，优先可免费取消套餐</li>
+    <li>存好领保电话；出发前 48 小时查看亚庇、槟城天气预报</li>
+  </ul>
+
+  <h2>📌全域重要须知 & 购物退税说明</h2>
+  <div class="note-box">
+    <ul>
+      <li>Grab出行：全程优选7座MPV，适配4人+行李，上车核对车牌，可现金/信用卡支付。</li>
+      <li>沙巴入境：东马独立移民系统，必须填写MDAC，大概率查验返程机票。</li>
+      <li>免税&退税：亚庇免税店需护照原件、商品离境前禁拆；槟城单护照满300马币可退税，保留小票与未拆封商品。</li>
+      <li>航班须知：亚航、酷航无免费托运，务必提前官网买行李额度，机场购买溢价极高。</li>
+      <li>天气须知：马来西亚午后多短时阵雨，随身带伞，降雨持续时间短，不影响整体行程。</li>
+      <li>转机须知：新加坡酷航转机，提前确认是否需要过境签，留存全部行程单备用。</li>
+      <li>海岛安全：出海听从船长安排，风浪大禁止强行出海，禁止触碰珊瑚、海胆等海洋生物。</li>
+      <li>消费须知：夜市小摊只收现金，大型商场支持微信/支付宝/信用卡。</li>
+    </ul>
+    <p><strong>购物退税提示：</strong>槟城市区没有真正免税商场，兰卡威才是免税岛；槟城商场为含税商场，同一家认证店铺累计消费≥300马币，出示护照拿退税单，最后在槟城出境机场海关盖章退税，食品烟酒不能退税。亚庇Jesselton Mall是东马少有的市区免税店，商品离境前不能拆封。</p>
+  </div>
+</div>
+
+<script>
+// ===================== 【倒计时事件列表，在这里新增/修改活动时间】 =====================
+// 格式 {name:"活动名称", time:"YYYY-MM-DD HH:mm:ss", location:"地点"}
+const eventList = [
+  {name:"青岛出发航班 TR187", time:"2025-09-30 08:50:00", location:"青岛机场"},
+  {name:"抵达亚庇机场", time:"2025-09-30 19:30:00", location:"亚庇国际机场"},
+  {name:"Day2 哲斯顿码头集合跳岛", time:"2025-10-01 07:45:00", location:"Jesselton Point码头"},
+  {name:"Day3 Kawa红树林集合出发", time:"2025-10-02 13:15:00", location:"亚庇民宿"},
+  {name:"Day4 马里马里文化村集合（方案A）", time:"2025-10-03 08:45:00", location:"亚庇民宿"},
+  {name:"Day5 亚庇机场值机（飞槟城）", time:"2025-10-04 09:00:00", location:"亚庇机场"},
+  {name:"Day6 升旗山缆车站集合", time:"2025-10-05 08:50:00", location:"升旗山缆车站"},
+  {name:"Day7 19:00出发前往槟城机场", time:"2025-10-06 19:00:00", location:"槟城民宿"}
+];
+// ======================================================================================
+
+// Tab切换逻辑
+document.querySelectorAll('.tab-btn').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
+    document.querySelectorAll('.tab-panel').forEach(p=>p.classList.remove('active'));
+    btn.classList.add('active');
+    const tabId = btn.dataset.tab;
+    document.getElementById(tabId).classList.add('active');
+  })
+})
+
+// 倒计时逻辑：自动筛选下一个未发生事件
+function renderCountdown(){
+  const now = new Date().getTime();
+  let nextEv = null;
+  for(let ev of eventList){
+    const t = new Date(ev.time).getTime();
+    if(t > now){
+      nextEv = ev;
+      break;
+    }
+  }
+  const nameDom = document.getElementById("next-event-name");
+  const boxDom = document.getElementById("countdown-box");
+  if(!nextEv){
+    nameDom.innerText = "✅全部行程已结束";
+    boxDom.innerHTML = "";
+    return;
+  }
+  nameDom.innerText = "下一项：" + nextEv.name + "｜📍" + nextEv.location;
+  const diff = new Date(nextEv.time).getTime() - now;
+  const d = Math.floor(diff/(1000*60*60*24));
+  const h = Math.floor((diff%(1000*60*60*24))/(1000*60*60));
+  const m = Math.floor((diff%(1000*60*60))/(1000*60));
+  const s = Math.floor((diff%(1000*60))/1000);
+  boxDom.innerHTML = `
+    <span class="countdown-item">${d}天</span>
+    <span class="countdown-item">${h}时</span>
+    <span class="countdown-item">${m}分</span>
+    <span class="countdown-item">${s}秒</span>
+  `
+}
+renderCountdown();
+setInterval(renderCountdown,1000);
+</script>
+</body>
+</html>

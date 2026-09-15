@@ -34,7 +34,7 @@ table{width:100%;border-collapse:collapse;font-size:13px} th,td{padding:8px;bord
 </header>
 
 <div class="countdown" aria-live="polite">
-  <div class="small">⏱ 下一安排 · 全站固定倒计时</div>
+  <div class="small">⏱ 下一安排 · 全站行程倒计时</div>
   <div id="cdTitle">正在加载倒计时…</div>
   <div id="cdTime">--:--:--</div>
   <div id="cdHint">手机浏览器打开本文件即可运行；无需地图插件。</div>
@@ -42,36 +42,40 @@ table{width:100%;border-collapse:collapse;font-size:13px} th,td{padding:8px;bord
 
 <nav class="tabs" id="tabs">
   <button class="tab active" data-target="overview">总览</button>
-  <button class="tab" data-target="day1">Day 1</button>
-  <button class="tab" data-target="day2">Day 2</button>
-  <button class="tab" data-target="day3">Day 3</button>
-  <button class="tab" data-target="day4a">Day 4-A ⭐</button>
-  <button class="tab" data-target="day4b">Day 4-B</button>
-  <button class="tab" data-target="day5">Day 5</button>
-  <button class="tab" data-target="day6">Day 6</button>
-  <button class="tab" data-target="day7">Day 7</button>
-  <button class="tab" data-target="budget">预算</button>
-  <button class="tab" data-target="notes">提醒</button>
-  <button class="tab" data-target="packing">行李</button>
+    <button class="tab" data-target="packing">行李准备</button>
+  <button class="tab" data-target="day1">Day 1 09.30</button>
+  <button class="tab" data-target="day2">Day 2 10.01</button>
+  <button class="tab" data-target="day3">Day 3 10.02</button>
+  <button class="tab" data-target="day4a">Day 4-A 10.03 ⭐</button>
+  <button class="tab" data-target="day4b">Day 4-B 10.03</button>
+  <button class="tab" data-target="day5">Day 5 10.04</button>
+  <button class="tab" data-target="day6">Day 6 10.05</button>
+  <button class="tab" data-target="day7">Day 7 10.06</button>
+  <button class="tab" data-target="budget">预计花费（</button>
+  <button class="tab" data-target="notes">提醒事项</button>
+
 </nav>
 
 <section class="panel active" id="overview" data-tab="overview">
 <h2>🗺️ 行程总览</h2>
 <div class="grid">
-<div class="card"><strong>09/30–10/03</strong>亚庇 · 6人<br>海岛、Kawa、Mari Mari、日落、夜市</div>
-<div class="card"><strong>10/04–10/06</strong>槟城 · 4人<br>George Town、升旗山、极乐寺、Gurney</div>
+<div class="card"><strong>09/30–10/03</strong>亚庇 · 6人<br>海岛、Kawa、Mari Mari（可选）、日落、夜市、购物</div>
+<div class="card"><strong>10/04–10/06</strong>槟城 · 4人<br>George Town、升旗山、极乐寺、侨生博物馆、Gurney</div>
 </div>
-<div class="route-note">📌 主交通：Grab。6人建议 7-seater MPV；4人普通车。所有具体地点均可点「Google Maps」。</div>
-<div class="note"><b>默认方案：</b>Day 4-A。Day 4-B 是独立页面，可直接点顶部标签切换。</div>
+<div class="route-note">📌 主交通：Grab。6人建议 7-seater MPV；4人普通车。所有具体地点均可点「Google Maps」前往。</div>
+<div class="note"><b>10.03默认方案：</b>Day 4-A。如不去文化村可选B。</div>
+<div class="route-note">📗 提前填好 MDAC 回执（入境马来西亚前72h内填写）<a href="https://imigresen-oneline.imi.gov.my/mdac/main" target="_blank" rel="noopener">前往填写</a></div>
+	<div class="card"><strong>准备材料</strong>护照、往返机票行程单、第一晚入住的英文地址和邮编、邮箱号（尽量不要qq）<br><strong>注意事项：</strong>填写好后，回到官网首页，点击右上角“CHECK REGISTRATION"输入护照号、国籍和邮件收到的PIN码，下载PDF备用</div>
 <h3>✈️ 航班</h3>
 <ul>
-<li>TR187：08:50 青岛 → 15:00 新加坡</li>
-<li>TR416：17:00 新加坡 → 19:30 亚庇</li>
-<li>AK5323：12:25 亚庇 → 15:05 槟城</li>
-<li>TR499：22:20 槟城 → 新加坡 → 青岛（后段具体航班号未提供）</li>
+<li>09.30 TR187：08:50 青岛 → 15:00 新加坡</li>
+<li>09.30 TR416：17:00 新加坡 → 19:30 亚庇</li>
+<li>10.04 AK5323：12:25 亚庇 → 15:05 槟城</li>
+<li>10.06 TR499：22:20 槟城 → 23:55 新加坡</li>
+<li>10.07TR186：01:30 新加坡 → 07:35 青岛</li>
 </ul>
 <div class="grid">
-<div class="card"><strong>青岛机场</strong><a class="mapbtn" href="https://www.google.com/maps/search/?api=1&query=Qingdao%20Jiaodong%20International%20Airport" target="_blank" rel="noopener">📍 打开地图</a></div>
+<div class="card"><strong>青岛胶东国际机场</strong><a class="mapbtn" href="https://www.google.com/maps/search/?api=1&query=Qingdao%20Jiaodong%20International%20Airport" target="_blank" rel="noopener">📍 打开地图</a></div>
 <div class="card"><strong>新加坡樟宜</strong><a class="mapbtn" href="https://www.google.com/maps/search/?api=1&query=Singapore%20Changi%20Airport" target="_blank" rel="noopener">📍 打开地图</a></div>
 <div class="card"><strong>亚庇机场</strong><a class="mapbtn" href="https://www.google.com/maps/search/?api=1&query=Kota%20Kinabalu%20International%20Airport" target="_blank" rel="noopener">📍 打开地图</a></div>
 <div class="card"><strong>槟城机场</strong><a class="mapbtn" href="https://www.google.com/maps/search/?api=1&query=Penang%20International%20Airport" target="_blank" rel="noopener">📍 打开地图</a></div>
@@ -81,7 +85,9 @@ table{width:100%;border-collapse:collapse;font-size:13px} th,td{padding:8px;bord
 <section class="panel" id="day1" data-tab="day1">
       <div class="dayhead"><span class="daytag">Day 1</span><span>09/30 · 6人</span></div>
       <h2>青岛 → 新加坡 → 亚庇</h2>
+      <img src="./images/Lapangang.png" alt="亚庇" style="max-width:100%;border-radius:8px;margin:8px 0;">
       <div class="route-note">🗺️ 本日路线图可用下方地点按钮逐个打开 Google Maps。手机端不依赖地图插件也能正常跳转。</div>
+        
       <div class="timeline"><div class="timeline-item">
           <div class="time">08:50</div><div class="dot"></div>
           <div class="activity"><h3>青岛 → 新加坡 TR187</h3><p>青岛胶东国际机场 → 新加坡樟宜机场</p>
@@ -99,13 +105,13 @@ table{width:100%;border-collapse:collapse;font-size:13px} th,td{padding:8px;bord
         </div>
 <div class="timeline-item">
           <div class="time">19:30</div><div class="dot"></div>
-          <div class="activity"><h3>抵达亚庇</h3><p>Kota Kinabalu International Airport</p>
-          <a class="mapbtn" href="https://www.google.com/maps/search/?api=1&query=Kota%20Kinabalu%20International%20Airport" target="_blank" rel="noopener">📍 Google Maps</a></div>
+          <div class="activity"><h3>抵达亚庇</h3><p>Kota Kinabalu International Airport</p><p>取行李、办理手机卡、检查护照，Grab去民宿</p>
+         </div>
         </div>
 <div class="timeline-item">
           <div class="time">20:30</div><div class="dot"></div>
           <div class="activity"><h3>入住 + 简单晚餐</h3><p>Mari2 Homestay M7 / Imago The Loft B</p>
-          <a class="mapbtn" href="https://www.google.com/maps/search/?api=1&query=Imago%20Shopping%20Mall" target="_blank" rel="noopener">📍 Google Maps</a></div>
+          <a class="mapbtn" href="https://www.google.com/maps/search/?api=1&query=Imago%20Shopping%20Mall" target="_blank" rel="noopener">📍 Google Maps：商场</a><a class="mapbtn" href="https://www.google.com/maps/search/?api=1&query=KK%20Times%20Square%20Boulevard%202%20Iraya%20pantai%20baru%20sem" target="_blank" rel="noopener">📍 Google Maps：住处</a></div>
         </div>
 <div class="timeline-item">
           <div class="time">21:30</div><div class="dot"></div>
@@ -118,13 +124,12 @@ table{width:100%;border-collapse:collapse;font-size:13px} th,td{padding:8px;bord
       <div class="route-note">🗺️ 本日路线图可用下方地点按钮逐个打开 Google Maps。手机端不依赖地图插件也能正常跳转。</div>
       <div class="timeline"><div class="timeline-item">
           <div class="time">07:45</div><div class="dot"></div>
-          <div class="activity"><h3>前往 Jesselton Point</h3><p>码头集合</p>
-          <a class="mapbtn" href="https://www.google.com/maps/search/?api=1&query=Jesselton%20Point" target="_blank" rel="noopener">📍 Google Maps</a></div>
+          <div class="activity"><h3>前往 DBKK JETTY 码头</h3><p>近岛集合时间：提前20分钟</p>
+          <a class="mapbtn" href="https://maps.app.goo.gl/Lw6GnFAobQjEUSA28?g_st=aw" target="_blank" rel="noopener">📍 Google Maps：旅行社发地址</a></div>
         </div>
 <div class="timeline-item">
           <div class="time">08:15</div><div class="dot"></div>
-          <div class="activity"><h3>私人快艇</h3><p>Jesselton Point 出发</p>
-          <a class="mapbtn" href="https://www.google.com/maps/search/?api=1&query=Jesselton%20Point" target="_blank" rel="noopener">📍 Google Maps</a></div>
+          <div class="activity"><h3>坐船</h3><p>记得吃晕船药</p></div>
         </div>
 <div class="timeline-item">
           <div class="time">08:40</div><div class="dot"></div>
@@ -137,8 +142,8 @@ table{width:100%;border-collapse:collapse;font-size:13px} th,td{padding:8px;bord
           <a class="mapbtn" href="https://www.google.com/maps/search/?api=1&query=Sapi%20Island" target="_blank" rel="noopener">📍 Google Maps</a></div>
         </div>
 <div class="timeline-item">
-          <div class="time">14:40</div><div class="dot"></div>
-          <div class="activity"><h3>返回 Jesselton Point</h3><p>结束海岛行程</p>
+          <div class="time">15:30</div><div class="dot"></div>
+          <div class="activity"><h3>返回 Jesselton Point</h3><p>结束海岛行程 可返回洗漱修整</p>
           <a class="mapbtn" href="https://www.google.com/maps/search/?api=1&query=Jesselton%20Point" target="_blank" rel="noopener">📍 Google Maps</a></div>
         </div>
 <div class="timeline-item">
@@ -148,17 +153,22 @@ table{width:100%;border-collapse:collapse;font-size:13px} th,td{padding:8px;bord
         </div>
 <div class="timeline-item">
           <div class="time">19:00</div><div class="dot"></div>
-          <div class="activity"><h3>晚餐</h3><p>亚庇市区晚餐</p>
-          <a class="mapbtn" href="https://www.google.com/maps/search/?api=1&query=Imago%20Shopping%20Mall" target="_blank" rel="noopener">📍 Google Maps</a></div>
+          <div class="activity"><h3>晚餐</h3><p>亚庇市区晚餐</p><p>KK Garden Seafood:  <a class="mapbtn" href="https://www.google.com/maps/search/?api=1&query=KK%20Garden%20Seafood" target="_blank" rel="noopener">🍛 Google Maps</a></p>
+        
+          <p>Riyana Seafood Restaurant钱塘府海鲜餐厅:  <a class="mapbtn" href="https://www.google.com/maps/search/?api=1&query=钱塘府海鲜餐厅@5.9751848,116.0892946)" target="_blank" rel="noopener">🍛 Google Maps</a>
+          <a class="mapbtn" href="https://www.xiaohongshu.com/explore/6aa103730000000011033e4b?xsec_token=ABRVTp2C1Ka5vLYpl6vsJw7olevgzkFR5GTcDJsU0z1oQ=&xsec_source=pc_search&source=web_explore_feed">📕小红书推荐</a></p>
+          <p>源茶室（加雅街）<a class="mapbtn" href="https://www.google.com/maps/search/?api=1&query=源茶室)" target="_blank" rel="noopener">🍛 Google Maps</a>
+          <a class="mapbtn" href="https://www.xiaohongshu.com/explore/69f86fa1000000001f00338a?xsec_token=ABxveUCc543osYtJYHsWZUxR-P33ytHNeMzlszUp8gMqU=&xsec_source=pc_search&source=web_explore_feed">📕小红书推荐</a></p></div>
         </div></div>
     </section><section class="panel" id="day3" data-tab="day3">
       <div class="dayhead"><span class="daytag">day3</span><span>10/02 · 6人</span></div>
       <h2>Kawa Kawa 长鼻猴 + 红树林 / 黑沙滩</h2>
-      <div class="route-note">🗺️ 本日路线图可用下方地点按钮逐个打开 Google Maps。手机端不依赖地图插件也能正常跳转。</div>
+      <div class="route-note">🗺️ 本日路线图可用下方地点按钮逐个打开 Google Maps。手机端不依赖地图插件也能正常跳转。</div> 
+      <div class="route-note">📠 <span style="color:red;">红树林旅社还未联系确定</span><br>🐜今日穿长袖长裤，红树林蚊虫多，可带驱蚊和药膏</div>
       <div class="timeline"><div class="timeline-item">
           <div class="time">09:00</div><div class="dot"></div>
-          <div class="activity"><h3>慢起床 / 休息</h3><p>上午不赶行程</p>
-          <a class="mapbtn" href="https://www.google.com/maps/search/?api=1&query=Imago%20Shopping%20Mall" target="_blank" rel="noopener">📍 Google Maps</a></div>
+          <div class="activity"><h3>慢起床 / 休息</h3><p>上午不赶行程 自由活动 恢复体力</p> <p>敬文茶餐室:  <a class="mapbtn" href="https://www.google.com/maps/search/?api=1&query=敬文茶餐室@5.9419691,116.0645855)" target="_blank" rel="noopener">🍛 Google Maps</a><a class="mapbtn" href="https://www.xiaohongshu.com/explore/6a2839020000000007024036?xsec_token=ABWAcFIYBceApcx8P5EGW-bXvINNet44WGgJG3cWZRcOE=&xsec_source=pc_search&source=web_explore_feed" target="_blank" rel="noopener">📕小红书推荐</a></p>
+        </div>
         </div>
 <div class="timeline-item">
           <div class="time">13:15</div><div class="dot"></div>
@@ -172,7 +182,7 @@ table{width:100%;border-collapse:collapse;font-size:13px} th,td{padding:8px;bord
         </div>
 <div class="timeline-item">
           <div class="time">17:30</div><div class="dot"></div>
-          <div class="activity"><h3>黑沙滩</h3><p>拍照、散步</p>
+          <div class="activity"><h3>黑沙滩</h3><p>拍照、散步、萤火虫</p>
           <a class="mapbtn" href="https://www.google.com/maps/search/?api=1&query=Kawa%20Kawa%20Black%20Sand%20Beach" target="_blank" rel="noopener">📍 Google Maps</a></div>
         </div>
 <div class="timeline-item">
@@ -300,7 +310,7 @@ table{width:100%;border-collapse:collapse;font-size:13px} th,td{padding:8px;bord
 <div class="timeline-item">
           <div class="time">17:40</div><div class="dot"></div>
           <div class="activity"><h3>George Town 漫步</h3><p>Armenian Street / Love Lane / Chew Jetty / Esplanade</p>
-          <a class="mapbtn" href="https://www.google.com/maps/search/?api=1&query=Armenian%20Street" target="_blank" rel="noopener">📍 Google Maps</a></div>
+          <a class="mapbtn" href="https://www.google.com/maps/search/?api=1&query=Armenian%20Street" target="_blank" rel="noopener">📍 Google Maps</a><a class="mapbtn" href="https://www.google.com/maps/search/?api=1&query=Armenian%20Street" target="_blank" rel="noopener">📍 Google Maps</a></div>
         </div>
 <div class="timeline-item">
           <div class="time">19:20</div><div class="dot"></div>
@@ -311,7 +321,9 @@ table{width:100%;border-collapse:collapse;font-size:13px} th,td{padding:8px;bord
           <div class="time">21:00</div><div class="dot"></div>
           <div class="activity"><h3>返回住处</h3><p>Karpal Singh Drive</p>
           <a class="mapbtn" href="https://www.google.com/maps/search/?api=1&query=Karpal%20Singh%20Drive" target="_blank" rel="noopener">📍 Google Maps</a></div>
-        </div></div>
+        </div>
+   <img src="./images/Penang.png" alt="槟州" style="max-width:100%;border-radius:8px;margin:8px 0;"> 
+        </div>
     </section><section class="panel" id="day6" data-tab="day6">
       <div class="dayhead"><span class="daytag">Day 6</span><span>10/05 · 4人</span></div>
       <h2>升旗山 + 极乐寺 + George Town + Gurney Bay</h2>
@@ -449,18 +461,19 @@ table{width:100%;border-collapse:collapse;font-size:13px} th,td{padding:8px;bord
 
 <section class="panel" id="packing" data-tab="packing">
 <h2>🎒 行李 & 出发前清单</h2>
+ <div class="route-note">🧳 出发前几天装好行李，确认重量是否超限，及时购买行李额</div>
 <div class="grid">
-<div class="card"><strong>证件</strong><ul><li>护照（建议有效期 &gt; 6个月）</li><li>机票行程单</li><li>MDAC 回执</li><li>酒店确认单</li><li>旅行保险</li></ul></div>
-<div class="card"><strong>现金 / 通讯</strong><ul><li>每人 MYR 200–300 现金</li><li>SIM / eSIM</li><li>Grab 注册</li><li>银行卡</li></ul></div>
+<div class="card"><strong>证件</strong><ul><li>护照（建议有效期 &gt; 6个月）</li><li>机票行程单</li><li>MDAC 回执</li><li>住宿确认单</li></ul></div>
+<div class="card"><strong>现金 / 通讯</strong><ul><li>每人 MYR 200–300 现金</li><li>SIM / eSIM</li><li>Grab 注册</li><li>Google Map / Yelp 等APP</li><li>Visa / MasterCard / 银联（注意是否打开出境锁）</li></ul></div>
 <div class="card"><strong>衣物</strong><ul><li>夏装、薄长袖</li><li>泳衣、速干衣</li><li>拖鞋 + 运动鞋</li><li>帽子、墨镜</li></ul></div>
-<div class="card"><strong>海岛 / 防晒</strong><ul><li>SPF50+</li><li>驱蚊</li><li>防水手机袋</li><li>浮潜咬嘴（如自带）</li></ul></div>
-<div class="card"><strong>药品</strong><ul><li>肠胃药 / 感冒药</li><li>创可贴</li><li>个人常用药</li></ul></div>
-<div class="card"><strong>电子</strong><ul><li>英式三孔转换头</li><li>充电宝</li><li>数据线</li><li>雨伞</li></ul></div>
+<div class="card"><strong>海岛 / 防晒</strong><ul><li>SPF50+防晒</li><li>驱蚊、蚊虫叮咬药</li><li>防水手机袋</li><li>浮潜装备<br>面镜、干式呼吸管<br>长袖长裤潜水服<br>潜水袜、防晒手套</li></ul></div>
+<div class="card"><strong>药品</strong><ul><li>肠胃药 / 感冒药</li><li>创可贴</li><li>晕船药</li><li>个人常用药</li></ul></div>
+<div class="card"><strong>电子等</strong><ul><li>英式三孔转换头</li><li>充电宝</li><li>数据线</li><li>雨伞</li><li>颈枕</li></ul></div>
 </div>
-<div class="note"><b>出发前：</b>确认 3 段主要航班、尤其 10/06 22:20 槟城返程；确认酒店；购买旅行保险；提前预订海岛跳岛 / Kawa（优先可免费取消）；出发前 48 小时再看天气。</div>
+<div class="note"><b>出发前：</b>确认 3 段主要航班、订接机送机；确认酒店/民宿；提前预订海岛跳岛 / Kawa 团（优先订可免费取消的）；出发前 48 小时再看一遍天气；出发前 3 天确认行李重量</div>
 </section>
 
-<div class="footer">Malaysia Trip 2026 · 手机优先版 · 静态内容不依赖 JavaScript，倒计时和标签跳转由轻量 JS 提供</div>
+<div class="footer">Malaysia Trip 2026 可以在手机浏览器持续查看，伙伴们玩得开心</div>
 </div>
 
 <script>
@@ -487,7 +500,7 @@ table{width:100%;border-collapse:collapse;font-size:13px} th,td{padding:8px;bord
     }
     titleEl.textContent=next.title;
     timeEl.textContent=fmt(new Date(next.time)-now);
-    hintEl.textContent="时间按马来西亚 / 新加坡 GMT+8 计算 · "+new Date(next.time).toLocaleString('zh-CN',{timeZone:'Asia/Kuala_Lumpur',hour12:false});
+    hintEl.textContent="时间按北京 / 马来西亚 / 新加坡 GMT+8 计算（全程无时差）· "+new Date(next.time).toLocaleString('zh-CN',{timeZone:'Asia/Kuala_Lumpur',hour12:false});
   }
   updateCountdown(); setInterval(updateCountdown,1000);
 
